@@ -95,8 +95,12 @@ h2 {
   letter-spacing: 0;
 }
 
+.andrea-logo {
+  max-width: 15rem;;
+}
+
 .nycha-logo {
-  max-width: 19rem;;
+  max-width: 19rem;
 }
 
 h3.emphasis {
