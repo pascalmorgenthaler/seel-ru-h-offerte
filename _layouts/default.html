@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta property="og:image" content="{{ page.seo.social_image | default: site.data.site-settings.seo.social_image }}">
+
+  <title> Rituale & Heilpflanzen | Pajurama Kreativagentur </title>
+
+  <!------------ SEO Metadata  --------------------------------->
+<title> {{page.seo.title | default: site.data.site-settings.seo.title }} </title> 
+<meta name="description" content="{{page.seo.description | default: site.data.site-settings.seo.description }}">
+<meta name="keywords" content="{{page.seo.keywords | default: site.data.site-settings.seo.keywords }}">
+
+{% if page.seo.hide-from-google == true %}
+    <meta name="robots" content="noindex, nofollow">
+{% else %}
+     <meta name="robots" content="index, follow">
+{% endif %}
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css">
+
+  <link href="style.css" rel="stylesheet" />
+
+  <!------------ Favicon Metadata ------------>
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/site.webmanifest">
+<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#a49886">
+<link rel="shortcut icon" href="/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="msapplication-config" content="/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Adobe Font  -->
+
+  <link rel="stylesheet" href="https://use.typekit.net/fbx4efv.css">
+
+</head>
+<body>
+
+{{content}}
+
+<!-- - - - Section #8 - - - - - - - - -->
+<section id="section8" class="featured padded-b-0 center">
+    <h2 class="editable"> Wir würden dieses Projekt von ganzem Herzen gerne für dich umsetzen! </h2>
+    <p class="editable padded-t-1"> Bist du mit diesem Angebot zufrieden oder hast du irgendwelche Fragen? Müssen wir weitere Anpassungen vornehmen oder ist das Angebot für dich perfekt? Kontaktiere uns einfach, und wir können einen Termin vereinbaren, wenn es weitere Fragen zu klären gibt. Falls nicht, freuen wir uns sehr, dir den Vertrag zuzusenden und können es kaum erwarten, mit der Arbeit an deiner Website zu beginnen. </p>
+    <a href="mailto:creative@pajurama.com" target="_blank"> Schreib uns eine E-Mail </a></p>
+</section>
+
+
+{% unless page.instagram == false %}
+
+<!----
+<section class="igfeed no-padding">
+  <div class="igfeed-div"> --->
+   <!-- LightWidget WIDGET --> <!--<script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/0278b31f6ddc522792682546aafc7a97.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+  </div> --><!-- closes igfeed-div -->
+<!---</section>--><!-- closes the igfeed section -->
+
+{% endunless %}
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" integrity="sha256-RdH19s+RN0bEXdaXsajztxnALYs/Z43H/Cdm1U4ar24=" crossorigin="anonymous" />
+
+
+<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" integrity="sha256-wk7QMTzYE7BJvko9BsywPzRmKzhCtIQKTuN6/B9sRmw=" crossorigin="anonymous"></script>
+
+<!-- Custom JS -->
+<script>
+
+$(document).ready(function() {
+	$('.popup-gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Loading image #%curr%...',
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		},
+		image: {
+			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+			titleSrc: function(item) {
+				return item.el.attr('title');
+			}
+		}
+	});
+});
+
+</script>
+
+
+</body>
+
+</html>

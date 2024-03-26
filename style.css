@@ -1,0 +1,398 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; height: auto; }
+
+/* Override default gridlex padding */ 
+[class*=col] { padding: 0; }
+[class*=grid] { margin: 0; }
+
+section { position: relative; }
+
+html { 
+scroll-behavior: smooth ;
+-webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+
+body, html{
+  overflow-x: hidden;
+}
+
+.emphasis-custom {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+body {
+  font-family: 'ivypresto-display', serif;
+  color: rgb(90,90,90);
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+
+img {
+  max-width: 100%;
+}
+
+.front {
+  z-index: 100;
+}
+
+.center {
+  text-align: center;
+}
+
+.down-arrow {
+  position: absolute;
+  left: 48%;
+  bottom: 1rem;
+  top: auto;
+  width: 1.5rem;
+  z-index: 101;
+  font-weight: bold;
+  border: none;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3 {
+  text-transform: uppercase;
+  color: #3d4149;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: 'ivypresto-display';
+  font-weight: 100;
+  color: white;
+}
+
+h1 span {
+  font-size: 3vw;
+}
+
+h2 {
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+
+.padded-t-1 { padding-top: 1rem; }
+.padded-b-1 { 
+  padding-bottom: 1rem; 
+  font-size: 1.2rem;
+}
+
+.emphasis {
+  font-size: 2.8rem;
+  text-transform: none;
+  font-weight: light;
+  letter-spacing: 0;
+}
+
+.nycha-logo {
+  max-width: 19rem;;
+}
+
+h3.emphasis {
+  font-size: 2.5rem
+}
+
+.two5rem {
+  font-size: 2.5rem;
+}
+
+.onetworem { font-size: 1.2rem ;}
+
+h3 {
+  font-weight: 100;
+  letter-spacing: 3px;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+a {
+  color: #3d4149;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #3d4149;
+  text-decoration: none;
+  position: relative;
+  top:0;
+  transition: 0.3s;
+}
+
+p a:hover,
+nav a:hover {
+  color: rgb(120,120,120);
+  border-color: rgb(120,120,120);
+  top:2px;
+  position: relative;
+}
+
+p {
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  font-size: 1.3rem;
+  font-family: futura-pt, sans-serif;
+}
+
+
+
+li {
+  font-size: 1.3rem;
+  font-family: futura-pt, sans-serif;
+}
+
+p span {
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+li {
+  margin: 0.5rem 0;
+  margin-left: 1.5rem;
+  font-weight: 300;
+  padding-left: 1rem;
+}
+
+.padded-b-0 { padding-bottom: 5%; }
+
+hr {
+  border: none;
+  border-bottom: 3px solid #3d4149;
+  width: 50px;
+  margin:2rem 0;
+  text-align: center;
+}
+
+.featured hr {
+  border-color: white;
+}
+
+.centered hr {
+  margin: 2rem auto;
+}
+
+section {
+  padding: 5% 10%;
+  position: relative;
+}
+
+.mini-banner {
+  min-height: 80vh;
+  padding: 10%;
+}
+.mini-banner-2 {
+  min-height: 80vh;
+  padding: 10%;
+  border: 2px solid #CEC6BB;
+}
+
+.mini-banner.tall {
+  min-height: 100vh;
+}
+
+.no-padding {
+  padding: 0;
+}
+.padded {
+  padding: 10%;
+}
+
+.text-white h3 {
+  color: white;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.padded-1 {
+  padding: 1rem;
+}
+
+.margin-t-2 { margin-top: 2rem; }
+
+.mini-banner,
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  min-height: 30vh;
+}
+.bg-image {
+  padding-bottom: 40%;
+}
+
+.mini-banner [class*=col] {
+  padding: 3% 5%;
+}
+
+.mini-banner .logo {
+  padding: 1%;
+}
+
+.bg-image {
+  background-color: green; /* Set a fall-back color while images are loading */ 
+  background-image: url('/images/index/index-header-1.jpg');
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.bg-banner {
+  background-image: url('/images/banner.jpg');
+}
+
+.banner {
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom right, #668d66,#b6c1a9);
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+}
+.banner h3 {
+  color: white;
+  margin-top: 1rem;
+}
+.bg-overlay::after {
+  z-index: 1;
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+
+.bg-overlay > * {
+  z-index: 2;
+  position: relative;
+}
+
+.featured {
+  background-image: linear-gradient(to bottom right, #668d66,#b6c1a9);
+  color: white;
+}
+
+.featured *{
+  color: white;
+  border-color: white;
+}
+.no-padding  {
+  padding: 0;
+}
+
+.gallery.no-padding [class*="col"] {
+  padding:0;
+}
+
+.gallery .bg-image {
+  padding-bottom: 100%;
+  border: 2px solid white;
+}
+.featured.bg-image {
+  border: none;
+}
+.popup-gallery a {
+    padding: 0;
+    display: block;
+    min-height: 100%;
+    background-color: #fafafa;
+}
+
+.show-xs, 
+.show-sm,
+.show-md,
+.show-bg {
+	display: none; 
+}
+
+@media(max-width:700px) {
+  section,
+  .mini-banner,
+  section.padded {
+    padding-bottom: 4rem;
+  }
+  .no-padding {
+    padding-bottom: 0;
+  }
+  .no-padding [class*="-12"] {
+    padding:10%;
+  }
+  [class*="grid"] .bg-image {
+    padding-bottom:50%;
+  }
+  .gallery .bg-image {
+    padding-bottom: 100%;
+  }
+
+  .mb-light {
+    background-color: white;
+    background-image:none;
+  }
+  .mb-light * {
+    color: #3d4149;
+  }
+
+  .emphasis {
+    font-size: 1.7rem;
+  }
+
+  h3.emphasis {
+    font-size: 1.5rem;
+  }
+  .bg-banner {
+    background-position:center; 
+    background-attachment:fixed; 
+    -o-background-size:cover; 
+    -moz-background-size:cover; 
+    -webkit-background-size:cover; 
+    background-size:100% 100%; 
+    background-repeat:no-repeat;
+  }
+
+  h1 {
+    font-size: 8vw;
+  }
+  h1 span {
+    display: block;
+    font-size: 4vw;
+  }
+
+  .nycha-logo {
+    max-width: 15rem;
+  }
+  h2 { font-size: 1.5rem;}
+
+
+
+  .pajurama-logo {
+    max-width: 8rem;
+    padding-top: 1rem;;
+  }
+
+  .xs-font {
+     font-size: 1rem;
+     padding-top: 0.5rem;
+    }
+
+  .hide-xs { display: none;  }
+  .show-xs { display: block; }
+}
